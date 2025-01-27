@@ -5,11 +5,14 @@ import { BrowserRouter } from 'react-router-dom'
 import { ApiProvider } from '@reduxjs/toolkit/query/react'
 import { store } from './assets/store/store.js'
 import { Provider } from 'react-redux'
+import { HomeProvider } from './context/HomeContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <HomeProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HomeProvider>
   </Provider>
 )
