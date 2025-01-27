@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { fetchProducts } from '../store/actions/productsActions';
+import { fetchProducts } from '../assets/store/actions/productsActions';
 import { useDispatch, useSelector } from 'react-redux';
-import { handleDelProduct } from '../store/reducers/productSlice';
+import { handleDelProduct } from '../assets/store/reducers/productSlice';
 
 const Products = () => {
     const dispatch = useDispatch()

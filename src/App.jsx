@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import Home from './assets/components/Home'
-import Users from './assets/components/Users'
-import Products from './assets/components/Products'
+import Home from './components/Home'
+import Users from './components/Users'
+import Products from './components/Products'
 
 const App = () => {
   return (
