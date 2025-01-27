@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { act } from "react";
 
 const initialState = {
     users: [
@@ -228,7 +229,11 @@ const initialState = {
 export const userSlice = createSlice({
     name: "Users",
     initialState,
-    reducers: {}
+    reducers: {
+        handleDel: (state, action) => {
+            state.filter((user, index) => index != action.payload)
+        }
+    }
 })
 
 export default userSlice.reducer
