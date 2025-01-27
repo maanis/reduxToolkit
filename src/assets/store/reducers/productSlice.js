@@ -7,7 +7,11 @@ const initialState = {
 const productSlice = createSlice({
     name: 'Products',
     initialState,
-    reducers: {}
+    reducers: {
+        getProducts: (state, action) => {
+            console.log(action.payload)
+        }
+    }
 })
 
 export default productSlice.reducer
