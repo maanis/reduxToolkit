@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { fetchProducts } from '../store/actions/productsActions';
 import { useDispatch, useSelector } from 'react-redux';
+import { handleDelProduct } from '../store/reducers/productSlice';
 
 const Products = () => {
     const dispatch = useDispatch()
@@ -15,7 +16,7 @@ const Products = () => {
             {data.map((product, index) => (
                 <div key={index} className='flex gap-4'>
                     <h3>{product.title}</h3>
-                    <p onClick={() => dispatch(handleDel(index))} className='text-red-600 cursor-pointer'>x</p>
+                    <p onClick={() => dispatch(handleDelProduct(index))} className='text-red-600 cursor-pointer'>x</p>
                 </div>
             ))}
         </div>
