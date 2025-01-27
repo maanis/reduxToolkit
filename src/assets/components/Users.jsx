@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { handleDel } from '../store/usersSlice'
+import { handleDel } from '../store/reducers/usersSlice'
 
 const Users = () => {
-    const users = useSelector(state => state.Users)
+    const { users } = useSelector(state => state.Users)
     console.log(users)
     const dispatch = useDispatch()
     return (
